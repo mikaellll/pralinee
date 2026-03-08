@@ -1,0 +1,56 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'About Us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Our Heritage"
+    image={{
+      src: '~/assets/images/hero-bakery-interior.png',
+      alt: 'Artisan Baker MOF',
+    }}
+  >
+    <Fragment slot="title">
+      The Passion for <span class="text-accent dark:text-white">French Excellence</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      For generations, we have cultivated the taste for the real. Our mission is to promote French baking and pastry
+      know-how throughout the world.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline="Our History"
+    title="From Paris to the World"
+    items={[
+      {
+        title: 'Authenticity',
+        description: 'We exclusively use natural sourdoughs and slow fermentation techniques for unparalleled flavors.',
+      },
+      {
+        title: 'Global Influence',
+        description: 'Our articles are read and followed by enthusiasts in the United States, Japan, and China.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/foret-noire.png',
+      alt: 'Prestigious pastry',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why follow us?</h3>
+      We don't just share recipes; we tell the story of each ingredient, of each technical gesture that transforms flour
+      and butter into works of art.
+    </Fragment>
+  </Content>
+</Layout>

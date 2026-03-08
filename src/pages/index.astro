@@ -1,0 +1,71 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: "L'Art de la Pâtisserie Française — Bienvenue",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Découvrir la Pâtisserie',
+        href: '/category/patisserie',
+      },
+      { text: 'A propos', href: '/about' },
+    ]}
+    image={{ src: '~/assets/images/hero-bakery-interior.png', alt: 'Boulangerie Pralinée - Chef Pâtissier MOF' }}
+  >
+    <Fragment slot="title">
+      L'Art de la <span class="text-accent dark:text-white">Pâtisserie Française</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Plongez dans l'univers d'excellence des maîtres boulangers et pâtissiers. Recettes traditionnelles, secrets de
+      fabrication et histoire des classiques qui font la renommée de la France à travers le monde.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Notre Savoir-Faire"
+    title="L'Excellence à la Française"
+    subtitle="Une référence reconnue à Paris, New York, Tokyo et Shanghai."
+    items={[
+      {
+        title: 'Tradition',
+        description: 'Respect des méthodes ancestrales et des décrets qui protègent notre patrimoine boulanger.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Qualité',
+        description:
+          'Sélection des meilleurs ingrédients : farines d’exception, beurre de baratte et fruits de saison.',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'Transmission',
+        description: 'Partage de recettes détaillées et de techniques professionnelles accessibles à tous.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Derniers articles du Blog"
+    information={`Restez informé des dernières actualités et conseils grâce à notre blog.`}
+  />
+</Layout>

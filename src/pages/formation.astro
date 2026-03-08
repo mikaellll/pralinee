@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Formation',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Formations"
+    title="Passez au niveau supérieur avec nos formations"
+    subtitle="Apprenez les meilleures techniques pour booster votre business et votre présence en ligne."
+    actions={[{ variant: 'primary', text: 'Voir les formations', href: '#formations' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Formation Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="formations"
+    title="Nos programmes"
+    subtitle="Des contenus riches et actionnables immédiatement."
+    items={[
+      {
+        title: 'Développement Web',
+        description: 'Maîtrisez Astro, Tailwind et les outils de demain.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Stratégie SEO',
+        description: 'Apprenez à ranker en première page des résultats.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Marketing Digital',
+        description: 'Développez votre audience sur les réseaux sociaux.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="Prêt à commencer ?"
+    subtitle="Rejoignez nos étudiants et boostez vos compétences dès aujourd'hui."
+    actions={[{ variant: 'primary', text: "S'inscrire", href: '#' }]}
+  />
+</Layout>

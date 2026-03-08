@@ -1,0 +1,57 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'À propos',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Notre Héritage"
+    image={{
+      src: '~/assets/images/hero-bakery-interior.png',
+      alt: 'Artisan Boulanger MOF',
+    }}
+  >
+    <Fragment slot="title">
+      La Passion de l'Excellence <span class="text-accent dark:text-white">Française</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Depuis des générations, nous cultivons le goût du vrai. Notre mission est de faire rayonner le savoir-faire
+      boulanger et pâtissier français à travers le monde.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline="Notre Histoire"
+    title="De Paris à l'International"
+    items={[
+      {
+        title: 'Authenticité',
+        description:
+          'Nous utilisons exclusivement des levains naturels et des techniques de fermentation lente pour des saveurs inégalées.',
+      },
+      {
+        title: 'Rayonnement',
+        description: 'Nos articles sont lus et suivis par des passionnés aux États-Unis, au Japon et en Chine.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/foret-noire.png',
+      alt: 'Pâtisserie de prestige',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pourquoi nous suivre ?</h3>
+      Nous ne nous contentons pas de partager des recettes ; nous racontons l'histoire de chaque ingrédient, de chaque geste
+      technique qui transforme la farine et le beurre en œuvres d'art.
+    </Fragment>
+  </Content>
+</Layout>

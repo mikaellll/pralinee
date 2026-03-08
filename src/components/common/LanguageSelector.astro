@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const locales = {
+  fr: {
+    label: 'Français',
+    href: '/',
+    text: 'FR',
+    flag: '🇫🇷',
+  },
+  en: {
+    label: 'English',
+    href: '/en',
+    text: 'EN',
+    flag: '🇬🇧',
+  },
+};
+
+const currentLocale = Astro.currentLocale || 'fr';
+const otherLocale = (currentLocale === 'fr' ? 'en' : 'fr') as 'en' | 'fr';
+
+// Logic to keep the current path when switching language
+const url = new URL(Astro.url);
+const pathname = url.pathname;
+
+let targetPath = '/';
+if (currentLocale === 'fr') {
+  // Switching FR -> EN
+  targetPath = `/en${pathname === '/' ? '' : pathname}`;
+} else {
+  // Switching EN -> FR
+  targetPath = pathname.replace('/en', '') || '/';
+}
+---
+
+<div class="flex items-center">
+  <a
+    href={targetPath}
+    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center uppercase font-semibold"
+    aria-label={`Switch to ${locales[otherLocale].label}`}
+  >
+    <Icon name="tabler:language" class="w-5 h-5 mr-1" />
+    <span class="mr-1">{locales[otherLocale].flag}</span>
+    {locales[otherLocale].text}
+  </a>
+</div>

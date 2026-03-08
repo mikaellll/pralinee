@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'The Art of French Pastry — Welcome',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Discover Pastry',
+        href: '/en/category/patisserie',
+      },
+      { text: 'About', href: '/en/about' },
+    ]}
+    image={{ src: '~/assets/images/hero-bakery-interior.png', alt: 'Pralinée Bakery - Executive Pastry Chef' }}
+  >
+    <Fragment slot="title">
+      The Art of <span class="text-accent dark:text-white">French Pastry</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Immerse yourself in the world of excellence of master bakers and pastry chefs. Traditional recipes, manufacturing
+      secrets and the history of the classics that make France famous throughout the world.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Our Knowledge"
+    title="French Excellence"
+    subtitle="A recognized reference in Paris, New York, Tokyo and Shanghai."
+    items={[
+      {
+        title: 'Tradition',
+        description: 'Respect for ancestral methods and decrees that protect our baking heritage.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Quality',
+        description: 'Selection of the best ingredients: exceptional flours, churned butter and seasonal fruits.',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'Transmission',
+        description: 'Sharing detailed recipes and professional techniques accessible to everyone.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Latest Blog Posts"
+    information={`Stay informed with the latest news and tips through our blog.`}
+  />
+</Layout>
