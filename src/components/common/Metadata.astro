@@ -15,14 +15,19 @@ export interface Props extends MetaData {
 }
 
 const {
-  title = '',
+  title: propTitle,
   ignoreTitleTemplate = false,
-  canonical = String(getCanonical(String(Astro.url.pathname || ''))),
+  canonical: propCanonical,
   robots = {},
-  description = '',
+  description: propDescription,
   openGraph = {},
   twitter = {},
 } = Astro.props;
+
+// Ensure we have strings, even if props are null
+const title = propTitle ?? '';
+const description = propDescription ?? '';
+const canonical = propCanonical ?? String(getCanonical(String(Astro.url.pathname || '')));
 
 const language = Astro.currentLocale || I18N?.language || 'en';
 
@@ -51,7 +56,6 @@ const seoProps: AstroSeoProps = merge(
     noindex: typeof METADATA?.robots?.index !== 'undefined' ? !METADATA.robots.index : undefined,
     nofollow: typeof METADATA?.robots?.follow !== 'undefined' ? !METADATA.robots.follow : undefined,
     description: METADATA?.description || '',
-    // openGraph: METADATA?.openGraph || {}, // Removed to avoid potential undefined properties
     twitter: METADATA?.twitter || {},
   },
   {
@@ -67,7 +71,6 @@ const seoProps: AstroSeoProps = merge(
 );
 
 // SEO: Language Alternates (hreflang)
-// IMPORTANT: The key MUST be 'hreflang' (lowercase) for @astrolib/seo
 const siteUrl = SITE?.site || 'https://pralinee.fr';
 const pathWithoutEn = (Astro.url.pathname || '').replace(/^\/en/, '') || '/';
 
