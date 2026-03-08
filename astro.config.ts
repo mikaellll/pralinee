@@ -15,6 +15,8 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
+import cloudflare from '@astrojs/cloudflare';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -24,6 +26,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   site: 'https://pralinee.fr',
   output: 'static',
+
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr', 'en'],
@@ -95,4 +98,6 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: cloudflare(),
 });
