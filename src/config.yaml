@@ -11,20 +11,20 @@ metadata:
   title:
     default: Pralinée — L'Art de la Pâtisserie Française
     template: '%s — Pralinée'
-  description: 'Découvrez les secrets de la boulangerie et pâtisserie française : recettes, histoire et savoir-faire.'
+  description: 'Découvrez les secrets de la boulangerie et pâtisserie française : recettes, histoire, astuces et savoir-faire traditionnel d’exception.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Mon Blog
+    site_name: Pralinée
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@user'
-    site: '@user'
+    handle: '@pralinee'
+    site: '@pralinee'
     cardType: summary_large_image
 
 i18n:

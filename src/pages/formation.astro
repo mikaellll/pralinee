@@ -5,7 +5,9 @@ import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Formation',
+  title: 'Formations Pâtisserie & Boulangerie — Pralinée',
+  description:
+    'Devenez un expert de la pâtisserie française avec nos formations en ligne. Apprenez les secrets des MOF pour réussir vos croissants, baguettes et éclairs.',
 };
 ---
 
@@ -13,13 +15,13 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Formations"
-    title="Passez au niveau supérieur avec nos formations"
-    subtitle="Apprenez les meilleures techniques pour booster votre business et votre présence en ligne."
-    actions={[{ variant: 'primary', text: 'Voir les formations', href: '#formations' }]}
+    tagline="Nos Formations"
+    title="Passez au niveau supérieur en Pâtisserie"
+    subtitle="Apprenez les gestes techniques des plus grands chefs pour sublimer vos créations et maîtriser l'art boulanger."
+    actions={[{ variant: 'primary', text: 'Voir les programmes', href: '#formations' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Formation Image',
+      src: '~/assets/images/foret-noire.png',
+      alt: 'Formation Pâtisserie Pralinée',
     }}
   />
 
@@ -27,30 +29,30 @@ const metadata = {
 
   <Features2
     id="formations"
-    title="Nos programmes"
-    subtitle="Des contenus riches et actionnables immédiatement."
+    title="Nos programmes d'excellence"
+    subtitle="Des modules complets pour apprendre à votre rythme, avec des vidéos HD et des fiches techniques détaillées."
     items={[
       {
-        title: 'Développement Web',
-        description: 'Maîtrisez Astro, Tailwind et les outils de demain.',
-        icon: 'tabler:code',
+        title: 'Boulangerie Tradition',
+        description: 'Maîtrisez le levain naturel et les farines anciennes pour un pain d’exception.',
+        icon: 'tabler:bread',
       },
       {
-        title: 'Stratégie SEO',
-        description: 'Apprenez à ranker en première page des résultats.',
-        icon: 'tabler:search',
+        title: 'Pâtisserie Fine',
+        description: 'Apprenez à monter des entremets complexes et à réaliser des glaçages miroirs parfaits.',
+        icon: 'tabler:cake',
       },
       {
-        title: 'Marketing Digital',
-        description: 'Développez votre audience sur les réseaux sociaux.',
-        icon: 'tabler:rocket',
+        title: 'Viennoiserie Maison',
+        description: 'Le secret d’un feuilletage croustillant et d’un alvéolage de rêve pour vos croissants.',
+        icon: 'tabler:croissant',
       },
     ]}
   />
 
   <CallToAction
-    title="Prêt à commencer ?"
-    subtitle="Rejoignez nos étudiants et boostez vos compétences dès aujourd'hui."
-    actions={[{ variant: 'primary', text: "S'inscrire", href: '#' }]}
+    title="Prêt à pâtisser ?"
+    subtitle="Rejoignez notre communauté de passionnés et commencez votre apprentissage dès maintenant."
+    actions={[{ variant: 'primary', text: "S'inscrire à une formation", href: '#' }]}
   />
 </Layout>

@@ -1,0 +1,37 @@
+---
+import { SITE } from 'astrowind:config';
+
+const {
+  title = SITE?.name || 'Pralinée',
+  description = '',
+  url = SITE?.site || 'https://pralinee.fr',
+  image = '',
+} = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: title,
+  description: description,
+  url: url,
+  image: image,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Pralinée',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${url}/favicon.svg`,
+    },
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${url}/search?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
