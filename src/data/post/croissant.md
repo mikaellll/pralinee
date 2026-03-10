@@ -1,41 +1,79 @@
 ---
 publishDate: 2026-03-08T09:30:00Z
 title: "Le Croissant au Beurre : L'Art du Feuilletage"
-excerpt: 'Découvrez le secret des couches dorées et croustillantes du véritable croissant artisanal.'
+excerpt: 'Découvrez le secret des couches dorées et croustillantes du véritable croissant artisanal, entre patience et technicité.'
 image: ~/assets/images/croissant.png
 category: Viennoiserie
 tags: [beurre, feuilletage, petit-déjeuner]
 metadata:
-  description: 'Histoire, technique de tourtage et recette du croissant au beurre français.'
+  description: 'Technique détaillée de tourtage, recette complète et secrets du croissant au beurre français.'
 ---
 
-Le **Croissant** est l'emblème du petit-déjeuner français. Pourtant, saviez-vous qu'il tire son origine du _Kipferl_ autrichien ? Retravaillé par les boulangers parisiens, il est devenu ce chef-d'œuvre de la viennoiserie que nous connaissons aujourd'hui.
+Le **Croissant** est l'emblème ultime du petit-déjeuner français. Saviez-vous qu'il tire son origine du _Kipferl_ autrichien ? Retravaillé par les boulangers parisiens au début du XXe siècle, il est devenu ce chef-d'œuvre de la "Pâte Feuilletée Levée" (PFL), où la légèreté de la brioche rencontre le croustillant du feuilletage.
 
-### L'Origine et l'Évolution
+---
 
-La légende raconte que le croissant fut créé à Vienne en 1683 pour célébrer la fin du siège de la ville par les Ottomans. Sa forme de croissant de lune rappellerait l'emblème des drapeaux ennemis. Introduit en France par Marie-Antoinette ou plus tard par August Zang lors de l'ouverture de sa boulangerie viennoise à Paris, il ne devient réellement "français" qu'au début du XXe siècle, lorsque les boulangers remplacent la pâte à brioche par une pâte feuilletée levée.
+## 🛠️ Fiche Technique
 
-### La Recette du Maître Viennoisier
+- **Temps de préparation :** 1h30 (étalée sur 2 jours)
+- **Temps de repos (Froid) :** 12h à 24h
+- **Temps de pousse :** 2h à 2h30
+- **Temps de cuisson :** 15-20 minutes
+- **Difficulté :** ⭐⭐⭐ (Expert)
+- **Portions :** 12 à 15 croissants
 
-Le secret d'un bon croissant réside dans le "beurrage" et le "tourtage".
+## 🛒 Ingrédients
 
-**Ingrédients :**
+- **500g** de farine T45 de force (ou mélange T45/T55)
+- **60g** de sucre cristal
+- **10g** de sel de mer
+- **20g** de levure boulangère fraîche
+- **100ml** d'eau froide
+- **150ml** de lait entier froid
+- **50g** de beurre mou (pour la détrempe)
+- **250g** de beurre de tourage (minimum 82% MG, type Charentes-Poitou)
+- **1 œuf** pour la dorure
 
-- 500g de farine T45 (riche en gluten)
-- 60g de sucre
-- 10g de sel
-- 25g de levure fraîche
-- 250ml de lait froid
-- 250g de beurre de tourage (minimum 82% de MG, type Charentes-Poitou)
+---
 
-### Méthode de Préparation
+## 👨‍🍳 Méthode Détaillée (Pas à Pas)
 
-1.  **La Détrempe :** Mélangez la farine, le sucre, le sel, la levure et le lait. Pétrissez brièvement. Formez un rectangle et laissez reposer au frais pendant 2h.
-2.  **Le Beurrage :** Étalez le beurre froid entre deux feuilles de papier sulfurisé pour former un carré. Placez-le au centre de la pâte (détrempe) et refermez les bords.
-3.  **Les Tours :** Étalez la pâte en longueur et pliez-la en trois (tour simple). Tournez d'un quart de tour et recommencez. Laissez reposer 1h au frais entre chaque tour. Effectuez 3 tours au total.
-4.  **Détaillage :** Étalez la pâte sur 3-4mm d'épaisseur. Coupez des triangles de 12cm de base sur 25cm de hauteur. Roulez-les délicatements de la base vers la pointe.
-5.  **Pousse et Cuisson :** Laissez lever 2h à 25-28°C. Dorez à l'œuf. Enfournez à **190°C pendant 15 à 18 minutes**.
+### Étape 1 : La Détrempe (Jour 1)
 
-### Le Résultat
+Mélangez la farine, le sucre, le sel et le beurre mou. Délayez la levure dans le mélange eau/lait froid et versez sur la farine. Pétrissez au robot (vitesse lente) pendant 5 à 7 minutes. La pâte doit être ferme et homogène. Formez une boule, incisez en croix et laissez reposer **30 min** au frigo, puis étalez en rectangle et filmez au contact. Laissez une nuit au réfrigérateur.
 
-Un croissant réussi doit être léger, avec un feuilletage bien visible à l'extérieur et une structure en "nid d'abeille" à l'intérieur.
+### Étape 2 : Le Tourage (Le Secret du Feuilletage)
+
+Étalez votre beurre de tourage froid entre deux feuilles de papier sulfurisé pour former un carré. Sortez la détrempe froide et étalez-la en un rectangle deux fois plus grand que le beurre. Placez le beurre au centre et repliez la pâte pour l'enfermer totalement.
+
+- **Tour simple :** Étalez la pâte en une longue bande, pliez-la en trois (comme une lettre). Tournez de 90°. Laissez reposer 30 min au frais.
+- **Tour double :** Étalez à nouveau, pliez les deux extrémités vers le centre, puis pliez en deux. Laissez reposer 1h au frais.
+
+### Étape 3 : Le Façonnage
+
+Étalez la pâte sur 3-4mm d'épaisseur pour obtenir un grand rectangle. Découpez des triangles isocèles (base de 9-10 cm, hauteur de 25 cm). Étirez légèrement la pointe du triangle. Roulez-les de la base vers la pointe sans trop serrer.
+
+### Étape 4 : L'Apprêt (La Levée)
+
+Disposez les croissants sur une plaque. Laissez-les pousser pendant **2h à 2h30** dans un endroit tiède (maximum 26-28°C pour ne pas faire fondre le beurre). Ils doivent doubler de volume et "trembler" légèrement quand on bouge la plaque.
+
+### Étape 5 : La Cuisson
+
+Préchauffez le four à **190°C** (chaleur tournante). Dorez délicatement les croissants à l'œuf avec un pinceau (évitez de mettre de la dorure sur le feuilletage apparent). Enfournez pour **15 à 20 minutes**.
+
+---
+
+## 💡 Les Conseils du Chef
+
+- **La Température :** C'est le facteur clé. Travaillez toujours dans une cuisine pas trop chaude et sur un plan de travail froid. Si la pâte ramollit, remettez-la au frais immédiatement.
+- **Le Beurre :** Utilisez un beurre dit "sec" ou de "tourage". Un beurre classique de supermarché contiendra trop d'eau et brisera le feuilletage.
+- **Le Refroidissement :** Laissez refroidir sur une grille pour garder le croustillant dessous.
+
+## 📋 Tableau de Cuisson & Conservation
+
+| Etape        | Température          | Durée              |
+| :----------- | :------------------- | :----------------- |
+| Préchauffage | 190°C                | 20 min             |
+| Cuisson      | 180°C                | 15 - 20 min        |
+| Conservation | Température ambiante | 1 jour (enveloppé) |
+| Congélation  | Cru                  | Oui (avant pousse) |

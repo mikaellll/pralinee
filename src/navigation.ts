@@ -34,11 +34,15 @@ export const headerDataEn = {
     },
     {
       text: 'Bakery',
-      href: getPermalink('/en/category/boulangerie'),
+      href: getPermalink('/en/category/bakery'),
+    },
+    {
+      text: 'Viennoiserie',
+      href: getPermalink('/en/category/viennoiserie'),
     },
     {
       text: 'Pastry',
-      href: getPermalink('/en/category/patisserie'),
+      href: getPermalink('/en/category/pastry'),
     },
     {
       text: 'About',
@@ -86,8 +90,9 @@ export const footerDataEn = {
       title: 'Navigation',
       links: [
         { text: 'Home', href: getPermalink('/en') },
-        { text: 'Bakery', href: getPermalink('/en/category/boulangerie') },
-        { text: 'Pastry', href: getPermalink('/en/category/patisserie') },
+        { text: 'Bakery', href: getPermalink('/en/category/bakery') },
+        { text: 'Viennoiserie', href: getPermalink('/en/category/viennoiserie') },
+        { text: 'Pastry', href: getPermalink('/en/category/pastry') },
         { text: 'About', href: getPermalink('/en/about') },
         { text: 'Sitemap', href: '/sitemap-index.xml' },
       ],

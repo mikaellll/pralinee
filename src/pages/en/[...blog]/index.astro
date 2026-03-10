@@ -1,6 +1,5 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
-
 import merge from 'lodash.merge';
 import type { ImageMetadata } from 'astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -16,7 +15,13 @@ import RelatedPosts from '~/components/blog/RelatedPosts.astro';
 export const prerender = true;
 
 export const getStaticPaths = (async () => {
-  return await getStaticPathsBlogPost('fr');
+  const paths = await getStaticPathsBlogPost('en');
+  return paths.map((path) => ({
+    ...path,
+    params: {
+      blog: path.params.blog.replace(/^en\//, ''),
+    },
+  }));
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;

@@ -129,9 +129,16 @@ export const blogTagRobots = APP_BLOG.tag.robots;
 export const blogPostsPerPage = APP_BLOG?.postsPerPage;
 
 /** */
-export const fetchPosts = async (): Promise<Array<Post>> => {
+export const fetchPosts = async (locale?: string): Promise<Array<Post>> => {
   if (!_posts) {
     _posts = await load();
+  }
+
+  if (locale) {
+    return _posts.filter((post) => {
+      const isEn = post.id.startsWith('en/');
+      return locale === 'en' ? isEn : !isEn;
+    });
   }
 
   return _posts;
@@ -166,9 +173,9 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
-export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
+export const findLatestPosts = async ({ count, locale }: { count?: number; locale?: string }): Promise<Array<Post>> => {
   const _count = count || 4;
-  const posts = await fetchPosts();
+  const posts = await fetchPosts(locale);
 
   return posts ? posts.slice(0, _count) : [];
 };
@@ -183,9 +190,10 @@ export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateF
 };
 
 /** */
-export const getStaticPathsBlogPost = async () => {
+export const getStaticPathsBlogPost = async (locale?: string) => {
   if (!isBlogEnabled || !isBlogPostRouteEnabled) return [];
-  return (await fetchPosts()).flatMap((post) => ({
+  const posts = await fetchPosts(locale);
+  return posts.flatMap((post) => ({
     params: {
       blog: post.permalink,
     },
@@ -194,10 +202,10 @@ export const getStaticPathsBlogPost = async () => {
 };
 
 /** */
-export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: PaginateFunction }) => {
+export const getStaticPathsBlogCategory = async ({ paginate, locale }: { paginate: PaginateFunction; locale?: string }) => {
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
-  const posts = await fetchPosts();
+  const posts = await fetchPosts(locale);
   const categories = {};
   posts.map((post) => {
     if (post.category?.slug) {
@@ -218,10 +226,10 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
 };
 
 /** */
-export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFunction }) => {
+export const getStaticPathsBlogTag = async ({ paginate, locale }: { paginate: PaginateFunction; locale?: string }) => {
   if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
 
-  const posts = await fetchPosts();
+  const posts = await fetchPosts(locale);
   const tags = {};
   posts.map((post) => {
     if (Array.isArray(post.tags)) {

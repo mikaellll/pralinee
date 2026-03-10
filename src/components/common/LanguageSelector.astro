@@ -20,15 +20,24 @@ const currentLocale = Astro.currentLocale || 'fr';
 const otherLocale = (currentLocale === 'fr' ? 'en' : 'fr') as 'en' | 'fr';
 
 // Logic to keep the current path when switching language
-const url = new URL(Astro.url);
-const pathname = url.pathname;
+const pathname = Astro.url.pathname;
 
 let targetPath = '/';
 if (currentLocale === 'fr') {
   // Switching FR -> EN
-  targetPath = `/en${pathname === '/' ? '' : pathname}`;
+  // Only allow keeping the path for known translated pages
+  const translatablePages = ['/', '/about'];
+  const cleanPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+
+  if (translatablePages.includes(cleanPath)) {
+    targetPath = `/en${cleanPath === '/' ? '' : cleanPath}`;
+  } else {
+    // Fallback to English home for non-translated pages
+    targetPath = '/en';
+  }
 } else {
   // Switching EN -> FR
+  // Usually, if we are in EN, we are on a page that exists in FR
   targetPath = pathname.replace('/en', '') || '/';
 }
 ---
