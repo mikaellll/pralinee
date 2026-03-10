@@ -253,7 +253,9 @@ export const getStaticPathsBlogTag = async ({ paginate, locale }: { paginate: Pa
 
 /** */
 export async function getRelatedPosts(originalPost: Post, maxResults: number = 4): Promise<Post[]> {
-  const allPosts = await fetchPosts();
+  // Detect locale from the post id (en/ prefix = English, otherwise French)
+  const locale = originalPost.id.startsWith('en/') ? 'en' : 'fr';
+  const allPosts = await fetchPosts(locale);
   const originalTagsSet = new Set(originalPost.tags ? originalPost.tags.map((tag) => tag.slug) : []);
 
   const postsWithScores = allPosts.reduce((acc: { post: Post; score: number }[], iteratedPost: Post) => {
