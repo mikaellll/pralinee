@@ -71,4 +71,4 @@ Ce projet est la propriété de **Pralinée**. Les contenus et recettes sont pro
 
 ---
 
-🚀 Développé avec passion pour le goût et le code.
+Développé avec passion pour le goût et le code.
